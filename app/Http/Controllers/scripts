@@ -1,0 +1,28 @@
+  
+
+  this is create sample by model 
+
+
+    Role::create([
+            'name' =>$request->name,
+            'slug' =>$request->name,
+            'created_at' =>Carbon::now(),
+            'updated_at' =>Carbon::now(),
+        ]);
+
+
+ this is deete sample by model
+            Roles_permissions::where(["role_id"=>$_GET['roleid'],"permission_id"=>$_GET['perid']])->delete();
+
+
+
+/// this is update sample by model
+
+          Role::where(["id"=>$request->id])->update([
+          'name' =>$request->name,
+          'slug' =>$request->name,
+      ]);
+
+
+this is get sample by database madul
+       $roles = DB::table('roles')->get();
